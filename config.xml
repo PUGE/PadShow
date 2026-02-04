@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.yourcompany.padshow" version="1.0.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:gap="http://phonegap.com/ns/1.0">
+    
+    <name>PadShow</name>
+    <description>平板展示应用</description>
+    
+    <!-- 强制横屏 -->
+    <preference name="orientation" value="landscape" />
+    <!-- 全屏 -->
+    <preference name="Fullscreen" value="true" />
+    
+    <!-- 加载外部网页 -->
+    <content src="https://demos.run/padShow/index.html" />
+    
+    <!-- 权限 -->
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <access origin="*" />
+    <allow-intent href="https://*/*" />
+    
+    <!-- Android设置 -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    
+    <!-- 插件（可选） -->
+    <plugin name="cordova-plugin-network-information" source="npm" />
+    
+</widget>
