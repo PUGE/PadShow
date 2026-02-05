@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puge.meeting" version="1.0.0" 
+<widget id="com.puge.staff" version="1.0.0" 
         xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0">
     
-    <name>会议管理系统</name>
-    <description>会议管理系统</description>
+    <name>在岗状态系统</name>
+    <description>在岗状态系统</description>
     
     <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
@@ -12,7 +12,7 @@
     <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
-    <content src="https://demos.run/padShow/meeting-room.html" />
+    <content src="https://demos.run/padShow/staff-status.html" />
     
     <!-- 权限 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
