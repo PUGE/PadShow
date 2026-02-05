@@ -18,12 +18,8 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="https://*/*" />
-    <widget>
-        <!-- 应用图标 -->
-        <icon src="res/icon.png" />
-        
-        <!-- 启动画面（可选） -->
-    </widget>
+    <!-- 应用图标 -->
+    <icon src="res/icon.png" />
     <!-- Android设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
