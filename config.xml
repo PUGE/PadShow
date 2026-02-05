@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.yourcompany.padshow" version="1.0.0" 
+<widget id="com.puge.meeting" version="1.0.0" 
         xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0">
     
-    <name>PadShow</name>
-    <description>平板展示应用</description>
+    <name>会议管理系统</name>
+    <description>会议管理系统</description>
     
     <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
@@ -12,13 +12,18 @@
     <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
-    <content src="https://demos.run/padShow/index.html" />
+    <content src="https://demos.run/padShow/meeting-room.html" />
     
     <!-- 权限 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="https://*/*" />
-    
+    <widget>
+        <!-- 应用图标 -->
+        <icon src="res/icon.png" />
+        
+        <!-- 启动画面（可选） -->
+    </widget>
     <!-- Android设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
