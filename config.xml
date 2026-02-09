@@ -18,8 +18,14 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="https://*/*" />
+    
+    <!-- 允许http访问 -->
+    <allow-navigation href="http://10.1.89.180:5000/*" />
+    <allow-navigation href="http://*/*" />
+    
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
+    
     <!-- Android设置 -->
     <platform name="android">
         <!-- 允许明文HTTP流量 -->
@@ -32,6 +38,12 @@
         <preference name="android-targetSdkVersion" value="30" />
         
         <allow-intent href="market:*" />
+    </platform>
+    
+    <!-- iOS设置（如果需要） -->
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
     </platform>
     
     <!-- 插件（可选） -->
