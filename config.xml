@@ -12,7 +12,7 @@
     <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
-    <content src="https://demos.run/padShow/meeting-room.html" />
+    <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
     
     <!-- 权限 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
