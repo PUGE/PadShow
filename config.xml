@@ -1,32 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets">
+<widget id="com.puge.meeting" version="1.0.0">
     
     <name>在岗状态系统</name>
     <description>在岗状态系统</description>
     
-    <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
     
-    <!-- 加载外部网页 -->
     <content src="http://10.1.89.180:5000/resources/staff-status.html" />
     
-    <!-- 基本权限 -->
     <access origin="*" />
+    <allow-navigation href="http://10.1.89.180:5000/*" />
     
-    <!-- Android设置 -->
     <platform name="android">
-        <!-- 允许明文HTTP流量 -->
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="30" />
+        
         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
             <application android:usesCleartextTraffic="true" />
         </edit-config>
-        
-        <!-- 设置API版本 -->
-        <preference name="android-minSdkVersion" value="22" />
-        <preference name="android-targetSdkVersion" value="29" />
     </platform>
     
-    <!-- 必须的插件 -->
     <plugin name="cordova-plugin-whitelist" source="npm" />
     
 </widget>
