@@ -1,35 +1,37 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets" 
+<widget id="com.puge.meeting" version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    
-    <name>会议管理系统</name>
-    <description>会议管理系统</description>
-    
-    <!-- 强制横屏 -->
+
+    <name>在岗状态系统</name>
+    <description>在岗状态系统</description>
+
     <preference name="orientation" value="landscape" />
-    <!-- 全屏 -->
     <preference name="Fullscreen" value="true" />
-    
-    <!-- 加载外部网页 -->
-    <content src="index.html" />
-    
-    <!-- 权限 -->
+
+    <content src="https://192.168.1.199:5000/resources/staff-status.html" />
+
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="cordova-plugin-network-information" source="npm" />
+    <plugin name="cordova-plugin-androidx-adapter" source="npm" />
+    <plugin name="cordova-plugin-androidx" source="npm" />
+
+    <!-- 文件操作插件 -->
+    <plugin name="cordova-plugin-file" source="npm" />
+
+    <!-- 自签名 HTTPS -->
+    <plugin name="cordova-plugin-certificates" source="npm" />
+    <plugin name="cordova-plugin-advanced-http" source="npm" />
 
     <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
-    <!-- 应用图标 -->
+
     <icon src="res/icon.png" />
-    <!-- Android设置 -->
+
     <platform name="android">
         <allow-intent href="market:*" />
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="29" />
     </platform>
-    
-    <!-- 插件（可选） -->
-    <plugin name="cordova-plugin-network-information" source="npm" />
-    
+
 </widget>
