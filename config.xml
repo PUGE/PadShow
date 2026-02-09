@@ -18,11 +18,25 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="https://*/*" />
+    
+    <!-- 允许HTTP导航 -->
+    <allow-navigation href="http://10.1.89.180:5000/*" />
+    
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
+    
     <!-- Android设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
+        
+        <!-- 关键：允许明文HTTP流量 (Android 9.0+) -->
+        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        
+        <!-- 可选：设置API版本确保兼容性 -->
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="29" />
     </platform>
     
     <!-- 插件（可选） -->
