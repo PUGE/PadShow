@@ -11,15 +11,14 @@
     <access origin="*" />
     <allow-navigation href="http://10.1.89.180:5000/*" />
     
+    <icon src="res/icon.png" />
+    
     <platform name="android">
-        <preference name="android-minSdkVersion" value="22" />
-        <preference name="android-targetSdkVersion" value="30" />
-        
-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
+        <allow-intent href="market:*" />
     </platform>
     
+    <!-- 使用插件来处理 AndroidManifest -->
+    <plugin name="cordova-plugin-customconfig" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" />
     
 </widget>
