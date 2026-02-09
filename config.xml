@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets" 
-        xmlns:gap="http://phonegap.com/ns/1.0">
+        xmlns="http://www.w3.org/ns/widgets">
     
     <name>会议管理系统</name>
     <description>会议管理系统</description>
@@ -11,25 +10,34 @@
     
     <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
     
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <!-- 权限配置 -->
     <access origin="*" />
+    <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <!-- 导航白名单 -->
     <allow-navigation href="http://10.1.89.180:5000/*" />
     <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
     
     <icon src="res/icon.png" />
     
     <platform name="android">
         <allow-intent href="market:*" />
         
-        <!-- 使用 cordova-plugin-androidx-adapter 来处理兼容性 -->
+        <!-- 设置API版本 -->
         <preference name="android-minSdkVersion" value="22" />
         <preference name="android-targetSdkVersion" value="29" />
+        
+        <!-- 启用不安全文件模式 -->
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
     </platform>
     
-    <!-- 这些插件已经存在于 npm，不会编译失败 -->
-    <plugin name="cordova-plugin-network-information" source="npm" />
-    <plugin name="cordova-plugin-androidx-adapter" source="npm" />
-    <plugin name="cordova-plugin-androidx" source="npm" />
+    <!-- 必要的插件 -->
+    <plugin name="cordova-plugin-whitelist" source="npm" />
     
 </widget>
