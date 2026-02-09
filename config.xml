@@ -11,7 +11,7 @@
     <preference name="Fullscreen" value="true" />
 
     <!-- 入口页面 -->
-    <content src="https://10.1.89.180:5000/resources/staff-status.html" />
+    <content src="https://192.168.1.199:5000/resources/staff-status.html" />
 
     <!-- 插件 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
@@ -23,6 +23,7 @@
     <access origin="*" />
     <allow-intent href="https://*/*" />
     <allow-navigation href="https://10.1.89.180:5000/*" />
+    <allow-navigation href="https://192.168.1.199:5000/*" />
 
     <!-- Android 图标 -->
     <icon src="res/icon.png" />
