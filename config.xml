@@ -12,7 +12,7 @@
     <preference name="Fullscreen" value="true" />
 
     <!-- 入口页面 -->
-    <content src="index.html" />
+    <content src="https://192.168.1.199:5000/resources/staff-status.html" />
 
     <!-- 插件 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
