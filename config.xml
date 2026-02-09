@@ -8,7 +8,7 @@
     <preference name="orientation" value="landscape" />
     <preference name="Fullscreen" value="true" />
 
-    <content src="https://10.1.89.180:5000/resources/meeting-room.html" />
+    <content src="https://192.168.23.14:5000/resources/meeting-room.html" />
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="cordova-plugin-network-information" source="npm" />
