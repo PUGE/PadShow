@@ -11,47 +11,22 @@
     <!-- 加载外部网页 -->
     <content src="http://10.1.89.180:5000/resources/staff-status.html" />
     
-    <!-- 权限配置 -->
+    <!-- 基本权限 -->
     <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    
-    <!-- 导航白名单 -->
-    <allow-navigation href="http://10.1.89.180:5000/*" />
-    <allow-navigation href="http://*/*" />
-    <allow-navigation href="https://*/*" />
-    
-    <!-- 应用图标 -->
-    <icon src="res/icon.png" />
     
     <!-- Android设置 -->
     <platform name="android">
-        <!-- 允许明文HTTP -->
+        <!-- 允许明文HTTP流量 -->
         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-            <application 
-                android:usesCleartextTraffic="true"
-                android:networkSecurityConfig="@xml/network_security_config" />
+            <application android:usesCleartextTraffic="true" />
         </edit-config>
         
-        <!-- 创建网络安全配置文件 -->
-        <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-        
-        <!-- API版本 -->
+        <!-- 设置API版本 -->
         <preference name="android-minSdkVersion" value="22" />
-        <preference name="android-targetSdkVersion" value="30" />
-        
-        <!-- 其他Android设置 -->
-        <preference name="AndroidInsecureFileModeEnabled" value="true" />
-        
-        <allow-intent href="market:*" />
+        <preference name="android-targetSdkVersion" value="29" />
     </platform>
     
-    <!-- 插件 -->
+    <!-- 必须的插件 -->
     <plugin name="cordova-plugin-whitelist" source="npm" />
-    <plugin name="cordova-plugin-network-information" source="npm" />
     
 </widget>
