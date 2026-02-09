@@ -1,45 +1,57 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets" 
-        xmlns:gap="http://phonegap.com/ns/1.0">
+        xmlns="http://www.w3.org/ns/widgets">
     
     <name>在岗状态系统</name>
     <description>在岗状态系统</description>
     
     <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
-    <!-- 全屏 -->
-    <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
     <content src="http://10.1.89.180:5000/resources/staff-status.html" />
     
-    <!-- 权限 -->
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <!-- 权限配置 -->
     <access origin="*" />
+    <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
     
-    <!-- 允许HTTP导航 -->
+    <!-- 导航白名单 -->
     <allow-navigation href="http://10.1.89.180:5000/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
     
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
     
     <!-- Android设置 -->
     <platform name="android">
-        <allow-intent href="market:*" />
-        
-        <!-- 关键：允许明文HTTP流量 (Android 9.0+) -->
+        <!-- 允许明文HTTP -->
         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-            <application android:usesCleartextTraffic="true" />
+            <application 
+                android:usesCleartextTraffic="true"
+                android:networkSecurityConfig="@xml/network_security_config" />
         </edit-config>
         
-        <!-- 可选：设置API版本确保兼容性 -->
+        <!-- 创建网络安全配置文件 -->
+        <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        
+        <!-- API版本 -->
         <preference name="android-minSdkVersion" value="22" />
-        <preference name="android-targetSdkVersion" value="29" />
+        <preference name="android-targetSdkVersion" value="30" />
+        
+        <!-- 其他Android设置 -->
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+        
+        <allow-intent href="market:*" />
     </platform>
     
-    <!-- 插件（可选） -->
+    <!-- 插件 -->
+    <plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="cordova-plugin-network-information" source="npm" />
     
 </widget>
