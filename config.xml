@@ -1,34 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets" 
+<widget id="com.puge.meeting" version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
-    
+
     <name>会议管理系统</name>
     <description>会议管理系统</description>
-    
-    <!-- 强制横屏 -->
-    <preference name="orientation" value="landscape" />
-    <!-- 全屏 -->
+
+    <preference name="Orientation" value="landscape" />
     <preference name="Fullscreen" value="true" />
-    
-    <!-- 加载外部网页 -->
-    <content src="index.html" />
-    
-    <!-- 权限 -->
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+    <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
+
     <access origin="*" />
-    <allow-intent href="https://*/*" />
-    
-    
-    <!-- 应用图标 -->
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+
     <icon src="res/icon.png" />
-    
-    <!-- Android设置 -->
+
     <platform name="android">
+        <edit-config file="AndroidManifest.xml"
+                     mode="merge"
+                     target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+
         <allow-intent href="market:*" />
     </platform>
-    
-    <!-- 插件 -->
-    <plugin name="cordova-plugin-network-information" source="npm" />
-    
+
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-whitelist" />
+
 </widget>
