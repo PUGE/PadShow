@@ -22,12 +22,15 @@
     <icon src="res/icon.png" />
     <!-- Android设置 -->
     <platform name="android">
+        <!-- 允许明文HTTP流量 -->
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application 
-                android:usesCleartextTraffic="true"
-                android:networkSecurityConfig="@xml/network_security_config" />
+            <application android:usesCleartextTraffic="true" />
         </edit-config>
-        <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        
+        <!-- 可选：设置最低和目标SDK版本 -->
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="30" />
+        
         <allow-intent href="market:*" />
     </platform>
     
