@@ -3,8 +3,8 @@
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
 
-    <name>在岗状态系统</name>
-    <description>在岗状态系统</description>
+    <name>testApp</name>
+    <description>testApp</description>
 
     <preference name="orientation" value="landscape" />
     <preference name="Fullscreen" value="true" />
@@ -24,7 +24,6 @@
     <allow-navigation href="http://*/*" />
     <allow-navigation href="http://192.168.1.199:5000/*" />
 
-    <icon src="res/icon.png" />
 
     <platform name="android">
         <allow-intent href="market:*" />
