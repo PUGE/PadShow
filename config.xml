@@ -23,9 +23,6 @@
     <!-- Android设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
     </platform>
     
     <!-- 插件（可选） -->
