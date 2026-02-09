@@ -12,15 +12,13 @@
     <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
-    <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
+    <content src="index.html" />
     
     <!-- 权限 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-intent href="https://*/*" />
     
-    <!-- 关键：添加这行允许HTTP导航 -->
-    <allow-navigation href="http://10.1.89.180:5000/*" />
     
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
