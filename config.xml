@@ -12,7 +12,7 @@
     <preference name="Fullscreen" value="true" />
 
     <!-- 入口页面 -->
-    <content src="http://192.168.1.199:5000/resources/staff-status.html" />
+    <content src="index.html" />
 
     <!-- 插件 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
@@ -20,10 +20,16 @@
     <plugin name="cordova-plugin-androidx-adapter" source="npm" />
     <plugin name="cordova-plugin-androidx" source="npm" />
 
-    <!-- 允许 HTTP 内网 -->
+    <!-- 支持自签名证书的 HTTPS -->
+    <plugin name="cordova-plugin-certificates" source="npm" />
+
+    <!-- 原生 HTTP 请求插件，可绕过 WebView HTTP 限制 -->
+    <plugin name="cordova-plugin-advanced-http" source="npm" />
+
+    <!-- 允许访问内网 HTTP / HTTPS -->
     <access origin="*" />
     <allow-navigation href="http://*/*" />
-    <allow-navigation href="http://192.168.1.199:5000/*" />
+    <allow-navigation href="https://*/*" />
 
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
@@ -33,8 +39,6 @@
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="22" />
         <preference name="android-targetSdkVersion" value="29" />
-        <!-- 不用 edit-config 也能允许 HTTP 内网 -->
-        <preference name="AndroidInsecureFileModeEnabled" value="true" />
     </platform>
 
 </widget>
