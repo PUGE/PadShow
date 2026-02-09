@@ -2,13 +2,13 @@
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
 
-    <name>在岗状态系统</name>
-    <description>在岗状态系统</description>
+    <name>会议管理系统</name>
+    <description>会议管理系统</description>
 
     <preference name="orientation" value="landscape" />
     <preference name="Fullscreen" value="true" />
 
-    <content src="https://10.1.89.180:5000/resources/staff-status.html" />
+    <content src="https://10.1.89.180:5000/resources/meeting-room.html" />
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="cordova-plugin-network-information" source="npm" />
