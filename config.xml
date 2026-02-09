@@ -1,43 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.puge.meeting" version="1.0.0" 
-        xmlns="http://www.w3.org/ns/widgets">
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:gap="http://phonegap.com/ns/1.0">
     
     <name>会议管理系统</name>
     <description>会议管理系统</description>
     
+    <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
+    <!-- 全屏 -->
     <preference name="Fullscreen" value="true" />
     
+    <!-- 加载外部网页 -->
     <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
     
-    <!-- 权限配置 -->
+    <!-- 权限 -->
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
-    <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
     
-    <!-- 导航白名单 -->
+    <!-- 关键：添加这行允许HTTP导航 -->
     <allow-navigation href="http://10.1.89.180:5000/*" />
-    <allow-navigation href="http://*/*" />
-    <allow-navigation href="https://*/*" />
     
+    <!-- 应用图标 -->
     <icon src="res/icon.png" />
     
+    <!-- Android设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
-        
-        <!-- 设置API版本 -->
-        <preference name="android-minSdkVersion" value="22" />
-        <preference name="android-targetSdkVersion" value="29" />
-        
-        <!-- 启用不安全文件模式 -->
-        <preference name="AndroidInsecureFileModeEnabled" value="true" />
     </platform>
     
-    <!-- 必要的插件 -->
-    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <!-- 插件 -->
+    <plugin name="cordova-plugin-network-information" source="npm" />
     
 </widget>
