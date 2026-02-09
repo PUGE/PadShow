@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <widget id="com.puge.meeting" version="1.0.0"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0">
@@ -6,35 +5,29 @@
     <name>在岗状态系统</name>
     <description>在岗状态系统</description>
 
-    <!-- 强制横屏 -->
     <preference name="orientation" value="landscape" />
-    <!-- 全屏 -->
     <preference name="Fullscreen" value="true" />
 
-    <!-- 入口页面 -->
     <content src="https://192.168.1.199:5000/resources/staff-status.html" />
 
-    <!-- 插件 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="cordova-plugin-network-information" source="npm" />
     <plugin name="cordova-plugin-androidx-adapter" source="npm" />
     <plugin name="cordova-plugin-androidx" source="npm" />
 
-    <!-- 支持自签名证书的 HTTPS -->
-    <plugin name="cordova-plugin-certificates" source="npm" />
+    <!-- 文件操作插件 -->
+    <plugin name="cordova-plugin-file" source="npm" />
 
-    <!-- 原生 HTTP 请求插件，可绕过 WebView HTTP 限制 -->
+    <!-- 自签名 HTTPS -->
+    <plugin name="cordova-plugin-certificates" source="npm" />
     <plugin name="cordova-plugin-advanced-http" source="npm" />
 
-    <!-- 允许访问内网 HTTP / HTTPS -->
     <access origin="*" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
 
-    <!-- 应用图标 -->
     <icon src="res/icon.png" />
 
-    <!-- Android 平台设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="22" />
