@@ -20,19 +20,21 @@
     <plugin name="cordova-plugin-androidx-adapter" source="npm" />
     <plugin name="cordova-plugin-androidx" source="npm" />
 
-    <!-- 允许 HTTP 明文流量 -->
-    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <!-- 允许 HTTP 内网 -->
     <access origin="*" />
     <allow-navigation href="http://*/*" />
+    <allow-navigation href="http://192.168.1.199:5000/*" />
 
     <!-- 应用图标 -->
     <icon src="res/icon.png" />
 
-    <!-- Android 设置 -->
+    <!-- Android 平台设置 -->
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="22" />
         <preference name="android-targetSdkVersion" value="29" />
+        <!-- 不用 edit-config 也能允许 HTTP 内网 -->
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
     </platform>
 
 </widget>
