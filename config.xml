@@ -12,7 +12,7 @@
     <preference name="Fullscreen" value="true" />
     
     <!-- 加载外部网页 -->
-    <content src="www/index.html" />
+    <content src="index.html" />
     
     <!-- 权限 -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
