@@ -9,7 +9,7 @@
     <preference name="Orientation" value="landscape" />
     <preference name="Fullscreen" value="true" />
 
-    <content src="http://10.1.89.180:5000/resources/meeting-room.html" />
+    <content src="index.html" />
 
     <access origin="*" />
     <allow-navigation href="http://*/*" />
@@ -17,16 +17,7 @@
 
     <icon src="res/icon.png" />
 
-    <platform name="android">
-        <edit-config file="AndroidManifest.xml"
-                     mode="merge"
-                     target="/manifest/application">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
-
-        <allow-intent href="market:*" />
-    </platform>
-
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-whitelist" />
 
